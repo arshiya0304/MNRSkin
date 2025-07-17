@@ -2,14 +2,25 @@
     margin:0px;
     padding:0px;
 }
-
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+main {
+    flex: 1;
+}
 html{
     scroll-behavior: smooth;
 }
 body{
     overflow-x: hidden;
     scroll-behavior: smooth;
-    scroll-snap-type: 3s;
 }
 
 .navbox{
@@ -45,9 +56,6 @@ body{
 .navbar .navbar-nav li:hover:before{
     display:block;
 }
-.navbar .navbar-nav .active::before .navbar .navbar-nav .active:hover{
-    display:none;
-}
 .hero{
     margin-top:110px;
     overflow: hidden;
@@ -59,7 +67,7 @@ body{
 }
 /* Mobile responsiveness */
 @media (max-width: 768px) {
-    .hero .container.hero-box{
+    .hero .hero-box{
         max-height: 110rem;
     }
     .hero .carousel-indicators{
@@ -71,17 +79,6 @@ body{
     .zigzag-img {
         width: 120px;
         height: 120px;
-    }
-    .fig.one{
-        margin-top:1rem;
-    }
-    .fig.two {
-        margin-left: 8rem;
-    }
-    .fig.three {
-        margin-left:0rem ;
-        margin-right: 10rem;
-        margin-top: -0.2rem;
     }
 }
 .hero .carousel-item{
@@ -312,7 +309,6 @@ body{
     color:navy;
 }
 .container-fluid.footer{
-    border-top: 1.6px dashed;
     margin-top:50px;
 }
 .container-fluid.footer .col h2{
